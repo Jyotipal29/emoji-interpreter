@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  background-color: #e5e7eb;
+}
+.containerCenter {
+  max-width: 600px;
+  margin: auto;
+}
+.emoji {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.inputClass {
+  padding: 0.5rem;
+  width: 40vh;
+}
+.meaningClass {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  width: fit-content;
+  border-radius: 0.3rem;
+}
