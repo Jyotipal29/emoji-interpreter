@@ -30,24 +30,24 @@ const emojiDb = {
 const emojisWeKnow = Object.keys(emojiDb);
 export default function App() {
   const [meaning, setMeaning] = useState("");
-
-  function emojiInputHandler(event) {
-    var userInput = event.target.value;
-
-    var meaning = emojiDb[userInput];
-    // setMeaning(meaning);
-    if (meaning in emojiDb) {
-      setMeaning(meaning);
-    } else if (userInput === " ") {
-      setMeaning(" enter emoji");
-    } else {
-      setMeaning("we dont have that emoji yet!");
-    }
-  }
   function emojiCliCkHandler(emoji) {
     var meaning = emojiDb[emoji];
     setMeaning(meaning);
   }
+  function emojiInputHandler(event) {
+    var userInput = event.target.value;
+
+    var meaning = emojiDb[userInput];
+
+    if (userInput === " ") {
+      setMeaning("enter emoji");
+    } else if (userInput in emojiDb) {
+      setMeaning(meaning);
+    } else {
+      setMeaning("We don't have that emoji yet! Sorry");
+    }
+  }
+
   return (
     <div className="App">
       <div className="containerCenter">
